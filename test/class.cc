@@ -39,7 +39,7 @@ int main() {
     b.bind_instance_method("Foo", "bar", &Foo::bar);
     b.bind_static_method("Foo", "baz", &Foo::baz);
   }
-  if (mrb->arena_idx != 0) {
+  if (mrb->gc.arena_idx != 0) {
     fprintf(stderr, "Arena increased!\n");
     return EXIT_FAILURE;
   }

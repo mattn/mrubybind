@@ -19,7 +19,7 @@ int main() {
     b.bind("modfunc", modfunc);
     b.bind_const("FOO_VALUE", 1234);
   }
-  if (mrb->arena_idx != arena) {
+  if (mrb->gc.arena_idx != arena) {
     fprintf(stderr, "Arena increased!\n");
     return EXIT_FAILURE;
   }

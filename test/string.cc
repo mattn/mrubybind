@@ -17,7 +17,7 @@ int main() {
     mrubybind::MrubyBind b(mrb);
     b.bind("emphasize", emphasize);
   }
-  if (mrb->arena_idx != 0) {
+  if (mrb->gc.arena_idx != 0) {
     fprintf(stderr, "Arena increased!\n");
     return EXIT_FAILURE;
   }
